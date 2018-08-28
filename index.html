@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="description" content="A pure maths PhD student at the University of Technology Sydney. Studying within areas such as group theory and computer science.">
+<meta name="keywords" content="geometric group theory, geodesic growth, formal language, University of Technology Sydney, UTS, Australia">
+<meta name="author" content="Alex Bishop">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex Bishop</title>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML"></script>
+
+<link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<script>
+
+function hideNavbar() {
+    var x = document.getElementById("nav-bar");
+    x.className = "nav-bar";
+}
+
+function toggleNavbar() {
+    var x = document.getElementById("nav-bar");
+    if (x.className === "nav-bar") {
+        x.className = "nav-bar responsive";
+    } else {
+        x.className = "nav-bar";
+    }
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div id="cover" class="parallax-image cover-image">
+<div>
+
+<div class="nav-bar-container">
+
+<a href="#" class="title">Alex Bishop</a>
+
+<div id="nav-bar" class="nav-bar">
+
+    <a href="#" class="title" onclick="hideNavbar()">Alex Bishop</a>
+
+    <a href="#about-me" onclick="hideNavbar()">About</a>
+    <a href="#conferences-header" onclick="hideNavbar()">Conferences</a>
+
+    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+        <i class="fa fa-bars"></i>
+    </a>
+
+</div>
+</div>
+
+<div class="caption">
+    <span class="message">Welcome</span>
+</div>
+
+</div>
+</div>
+
+<!-- section: about -->
+
+<div id="about-me" class="textblock">
+<div class="personal-info">
+<div>
+    <div class="profile-image">
+        <img src="img/profile.jpg" alt="my profile image" title="Alex Bishop" class="profile">
+    </div>
+    <div class="contact-details">
+        <h1 class="name">Alex Bishop</h1>
+        <h2 class="university">PhD Student at University of Technology Sydney</h2>
+        <span class="email">
+            <a href="mailto:alexbishop1234@gmail.com">
+                alexbishop1234@gmail.com
+            </a>
+        </span>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- section: research -->
+
+<div id="research-header" class="parallax-image research-image">
+<div>
+    <div class="caption"><h2>Research Interests</h2></div>
+</div>
+</div>
+
+<div id="research-list" class="textblock">
+<div class="content">
+    <h3>Group Geodesic Growth</h3>
+    <p>
+        The <em>geodesic growth function</em> of a group, \(G\), with respect to a finite symmetric generating set, \(X\), is given as
+        <span class="scroll-on-overflow">
+        \[
+            \Gamma_{G,X}(n)
+            =
+            \#
+            \left\vert
+            \left\{
+                w = x_1 x_2 \cdots x_k \in X^\ast
+            \, : \,
+                \ell_X(w) = k \leqslant n
+            \right\}
+            \right\vert.
+        \]
+        </span>
+        Thus, a geodesic growth function counts the number of distinct <em>geodesic paths</em> in the group with respect to the word metric.
+    </p>
+    <p>
+        We say that \(G\) has
+    </p>
+        <ul>
+            <li><em>exponential geodesic growth</em> if \(\Gamma_{G,X}(n)\) is exponential for every \(X\);</li>
+            <li><em>polynomal geodesic growth</em> if \(\Gamma_{G,X}(n)\) is polynomial for some \(X\);</li>
+            <li>otherwise, we say that \(G\) has <em>intermediate geodesic growth</em>.</li>
+        </ul>
+
+    <p>
+        The following are open questions.
+    </p>
+        <ul>
+            <li>Does there exist a group, \(G\), with a finite symmetric generating set \(X\) such that \(\Gamma_{G,X}(n)\) is intermediate?</li>
+            <li>Does there exist a group with intermediate geodesic growth?</li>
+            <li>Is there a 'nice' classification of polynomial geodesic growth?</li>
+        </ul>
+
+    <h3>Formal Languages in Group Theory</h3>
+    <p>
+        Given a group , \(G\), with a finite symmetric generating set, \(X\), we will define
+    </p>
+        <ol>
+            <li>the <em>word problem</em> as
+            <span class="scroll-on-overflow">
+            \[
+                \mathrm{W}(G,X)
+                =
+                \left\{
+                    w \in X^\ast
+                \, : \,
+                    w = 1_G
+                \right\};
+            \]
+            </span>
+            </li>
+
+            <li>the <em>co-word problem</em> as
+            <span class="scroll-on-overflow">
+            \[
+                \mathrm{coW}(G,X)
+                =
+                \left\{
+                    w \in X^\ast
+                \, : \,
+                    w \neq 1_G
+                \right\};
+            \]
+            </span>
+            </li>
+
+            <li>and the <em>full language of geodesics</em> as
+            <span class="scroll-on-overflow">
+            \[
+                \mathrm{Geod}(G,X)
+                =
+                \left\{
+                    w = x_1 x_2 \cdots x_k \in X^\ast
+                \, : \,
+                    \ell_X(w) = k
+                    \ \ 
+                    \mathrm{with}
+                    \ \ 
+                    k \in \mathbb{N}
+                \right\}.
+            \]
+            </span>
+            </li>
+        </ol>
+
+    <p>
+        We will be interested in class of formal languages which are closed under taking inverse word homomorphism,
+        for example, regular language, context-free and some lesser known classes such as ET0L and Indexed.
+    </p>
+
+    <p>
+        If we have a class, \(\mathcal{C}\), of formal languages which is closed under inverse word homomorphism,
+        then \(\mathrm{W}(G,X)\) is in the class \(\mathcal{C}\) for some \(X\) if and only if it is in the class \(\mathcal{C}\) for any choice of \(X\).
+        The same can be said of the co-word problem and the full language of geodesics.
+    </p>
+
+    <p>
+        The following are open questions.
+    </p>
+        <ul>
+            <li>Does there exist a group with a word problem that is Indexed but not context-free?</li>
+            <li>Is every group with an ET0L word problem virtually free?</li>
+        </ul>
+</div>
+</div>
+
+<!-- section: conferences -->
+
+<div id="conferences-header" class="parallax-image conference-image">
+<div>
+    <div class="caption"><h2>Conferences &amp; Workshops</h2></div>
+</div>
+</div>
+
+<div id="conferences-list" class="textblock">
+
+<ul class='timeline'>
+
+    <li class="year first">2018</li>
+
+    <li class="event offset-first">
+        <div class="header">
+            <abbr title="Geometric and Asymptotic Group Theory with Applications">GAGTA 2018</abbr>
+            at
+            <strong>Korean Institute for Advanced Studies</strong>
+        </div>
+        <hr>
+        <div class="date">
+            15 - 20 July, 2018
+        </div>
+        <div class="content" style="display:block">
+            <ul class="fa-ul">
+                <li><i class="fas fa-globe fa-li"></i><a href="https://sites.google.com/view/gagta2018/home" target="_blank">website</a></li>
+                <li><i class="fas fa-file-pdf fa-li"></i><a href="res/2018/gagta2018_poster.pdf" target="_blank">I gave a poster on geodesic growth</a></li>
+            </ul>
+        </div>
+    </li>
+
+    <li class="event">
+        <div class="header">
+            <abbr title="Trees, Dynamics and Locally Compact Groups">Trees 2018</abbr>
+            at
+            <strong>Heinrich-Heine-Universität Düsseldorf</strong>
+        </div>
+        <hr>
+        <div class="date">
+            25 - 29 June, 2018
+        </div>
+        <div class="content">
+            <ul class="fa-ul">
+                <li><i class="fas fa-globe fa-li"></i><a href="http://reh.math.uni-duesseldorf.de/~internet/trees2018/" target="_blank">website</a></li>
+                <li><i class="fas fa-file-pdf fa-li"></i><a href="res/2018/trees2018_talk.pdf" target="_blank">I gave a talk on geodesic growth</a></li>
+                <li><i class="fas fa-images fa-li"></i>
+                    <a href="res/2018/trees2018_1.jpeg" target="_blank">image 1</a>,&nbsp;
+                    <a href="res/2018/trees2018_2.jpeg" target="_blank">image 2</a>,&nbsp;
+                    <a href="res/2018/trees2018_3.jpeg" target="_blank">image 3</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+
+    <li class="event">
+        <div class="header">
+            <abbr title="Workshop on Logic, Algebra and Category Theory">LAC 2018</abbr>
+            at
+            <strong>La Trobe University, Melbourne</strong>
+        </div>
+        <hr>
+        <div class="date">
+            12 - 16 February, 2018
+        </div>
+        <div class="content">
+            <ul class="fa-ul">
+                <li><i class="fas fa-globe fa-li"></i><a href="http://www2.math.kyushu-u.ac.jp/~lac2018/" target="_blank">website</a></li>
+            </ul>
+        </div>
+    </li>
+
+    <li class="event">
+        <div class="header">
+            <abbr title="Quantum Computer Science School">QCSS 2018</abbr>
+            at
+            <strong>University of Technology Sydney</strong>
+        </div>
+        <hr>
+        <div class="date">
+            21 - 26 January, 2018
+        </div>
+        <div class="content">
+            <ul class="fa-ul">
+                <li><i class="fas fa-globe fa-li"></i><a href="http://conference.iiis.tsinghua.edu.cn/QCSS2018/" target="_blank">website</a></li>
+                <li><i class="fas fa-user fa-li"></i>I gave a short talk</li>
+            </ul>
+        </div>
+    </li>
+
+
+    <li class="year first">2017</li>
+
+    <li class="event offset-first">
+        <div class="header">
+            <abbr title="Australian Mathematical Sciences Student Conference">AMSSC</abbr>
+            at
+            <strong>University of Wollongong, Australia</strong>
+        </div>
+        <hr>
+        <div class="date">
+            6 - 8 December, 2017
+        </div>
+        <div class="content">
+            <ul class="fa-ul">
+                <li><i class="fas fa-globe fa-li"></i><a href="https://www.amssc.org/2017/" target="_blank">website</a></li>
+                <li><i class="fas fa-user fa-li"></i>I presented my Honours thesis</li>
+            </ul>
+        </div>
+    </li>
+
+    <li class="event">
+        <div class="header">
+            <abbr title="Australian Algebra Conference">AAC</abbr>
+            at
+            <strong>University of Technology Sydney</strong>
+        </div>
+        <hr>
+        <div class="date">
+            27 - 29 November, 2017
+        </div>
+        <div class="content">
+            <ul class="fa-ul">
+                <li><i class="fas fa-globe fa-li"></i><a href="http://aac2017.ltumathstats.com/" target="_blank">website</a></li>
+                <li><i class="fas fa-user fa-li"></i>I presented my Honours thesis</li>
+            </ul>
+        </div>
+    </li>
+
+    <li class="event">
+        <div class="header">
+            <abbr title="Groups of Intermediate Growth in Seville">GIGS17</abbr>
+            at
+            <strong>University of Seville, Spain</strong>
+        </div>
+        <hr>
+        <div class="date">
+            10 - 14 July, 2017
+        </div>
+        <div class="content">
+            <ul class="fa-ul">
+                <li><i class="fas fa-globe fa-li"></i><a href="https://www.imus.us.es/GIGS17/" target="_blank">website</a></li>
+            </ul>
+        </div>
+    </li>
+
+    <li class="event">
+        <div class="header">
+            <abbr title="Geometric and Asymptotic Group Theory with Applications">GAGTA</abbr>
+            at
+            <strong>University of Basque Country</strong>
+        </div>
+        <hr>
+        <div class="date">
+            3 - 7 July, 2017
+        </div>
+        <div class="content">
+            <ul class="fa-ul">
+                <li><i class="fas fa-globe fa-li"></i><a href="https://sites.google.com/site/gagta2017/home" target="_blank">website</a></li>
+            </ul>
+        </div>
+    </li>
+
+    <li class="event">
+        <div class="header">
+            <abbr title="young Geometric and Asymptotic Group Theory with Applications">yGAGTA</abbr>
+            at
+            <strong>University of Basque Country</strong>
+        </div>
+        <hr>
+        <div class="date">
+            26 - 30 June, 2017
+        </div>
+        <div class="content">
+            <ul class="fa-ul">
+                <li><i class="fas fa-globe fa-li"></i><a href="https://sites.google.com/site/gagta2017/home" target="_blank">website</a></li>
+            </ul>
+        </div>
+    </li>
+
+</ul>
+
+</div>
+
+</body>
+</html>
+

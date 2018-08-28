@@ -1,0 +1,103 @@
+
+.textblock {
+
+    color: #777;
+    background-color: #f8f8ff;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 0px;
+    margin: 0px;
+
+    >.content {
+        margin: auto;
+        padding: 40px 5px;
+        text-align: left;
+        display: block;
+        width: 95%;
+    }
+
+    >.personal-info {
+
+        margin: auto;
+        padding: 50px 5px;
+        display: table;
+
+        >div {
+
+            display: table-row;
+
+            >.profile-image, >.contact-details {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            >.contact-details {
+                vertical-align: top;
+
+                text-align: left;
+                padding-left: 40px;
+
+                >.email {
+                    font-size: x-large;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+@media screen and (max-width: $small-width) {
+
+.textblock {
+
+    >.content {
+        padding: 10px 5px;
+    }
+
+    >.personal-info {
+
+        display: block;
+        width: 100%;
+
+        >div {
+
+            display: block;
+            width: 100%;
+
+            >.profile-image, >.contact-details {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            >.contact-details {
+
+                padding-left: 0px;
+                padding-top: 20px;
+
+                >.name {
+                    display: none;
+                }
+
+                >.email {
+                    font-size: large;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+}
+

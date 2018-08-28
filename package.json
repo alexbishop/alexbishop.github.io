@@ -1,0 +1,13 @@
+{
+  "name": "alexbishop.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The personal website of Alex Bishop",
+  "author": "Alex Bishop",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-sass": "^1.0.0"
+  }
+}
