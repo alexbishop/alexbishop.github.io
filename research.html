@@ -1,0 +1,126 @@
+---
+layout: page
+title: Research
+subtitle: a summary of my research topics
+description: A summary of my main research areas and definitions of the topics I study.
+mathjax: true
+prefix-site-title: true
+
+meta-title: "Alex Bishop - Research Topics"
+meta-description: "Research topics and definitions."
+#share-img: "/test.jpg"
+---
+
+<h3>Group Geodesic Growth</h3>
+
+<p>
+    The <em>geodesic growth function</em> of a group, <span class="latex-inline">\( G \)</span>, with respect to a finite symmetric generating set, <span class="latex-inline">\( X \)</span>, is given as
+    <span class="latex-displaymath">
+    \[
+        \Gamma_{G,X}(n)
+        =
+        \#
+        \left\vert
+        \left\{
+            w = x_1 x_2 \cdots x_k \in X^\ast
+        \, : \,
+            \ell_X(w) = k \leqslant n
+        \right\}
+        \right\vert.
+    \]
+    </span>
+    Thus, a geodesic growth function counts the number of distinct <em>geodesic paths</em> in the group with respect to the word metric.
+</p>
+
+<p class="no-padding-below">
+    We say that <span class="latex-inline">\( G \)</span> has
+</p>
+<ul>
+    <li><em>exponential geodesic growth</em> if <span class="latex-inline">\(\Gamma_{G,X}(n)\)</span> is exponential for every <span class="latex-inline">\(X\)</span>;</li>
+    <li><em>polynomal geodesic growth</em> if <span class="latex-inline">\(\Gamma_{G,X}(n)\)</span> is polynomial for some <span class="latex-inline">\(X\)</span>;</li>
+    <li>otherwise, we say that <span class="latex-inline">\(G\)</span> has <em>intermediate geodesic growth</em>.</li>
+</ul>
+
+<p class="no-padding-below">
+    The following are open questions.
+</p>
+<ul>
+    <li>Does there exist a group, <span class="latex-inline">\(G\)</span>, with a finite symmetric generating set <span class="latex-inline">\(X\)</span> such that <span class="latex-inline">\(\Gamma_{G,X}(n)\)</span> is intermediate?</li>
+    <li>Does there exist a group with intermediate geodesic growth?</li>
+    <li>Is there a &lsquo;nice&rsquo; classification of polynomial geodesic growth?</li>
+</ul>
+
+
+
+<h3>Formal Languages in Group Theory</h3>
+
+<p>
+    Given a group, <span class="latex-inline">\(G\)</span>, with a finite symmetric generating set, <span class="latex-inline">\(X\)</span>, we will define
+</p>
+
+<ol>
+    <li>the <em>word problem</em> as
+    <span class="latex-displaymath">
+    \[
+        \mathrm{W}(G,X)
+        =
+        \left\{
+            w \in X^\ast
+        \, : \,
+            w = 1_G
+        \right\};
+    \]
+    </span>
+    </li>
+
+    <li>the <em>co-word problem</em> as
+    <span class="latex-displaymath">
+    \[
+        \mathrm{coW}(G,X)
+        =
+        \left\{
+            w \in X^\ast
+        \, : \,
+            w \neq 1_G
+        \right\};
+    \]
+    </span>
+    </li>
+
+    <li>and the <em>full language of geodesics</em> as
+    <span class="latex-displaymath">
+    \[
+        \mathrm{Geod}(G,X)
+        =
+        \left\{
+            w = x_1 x_2 \cdots x_k \in X^\ast
+        \, : \,
+            \ell_X(w) = k
+            \ \ 
+            \mathrm{with}
+            \ \ 
+            k \in \mathbb{N}
+        \right\}.
+    \]
+    </span>
+    </li>
+</ol>
+
+<p>
+    We will be interested in class of formal languages which are closed under taking inverse word homomorphism,
+    for example, regular language, context-free and some lesser known classes such as ET0L and Indexed.
+</p>
+
+<p>
+    If we have a class, <span class="latex-inline">\(\mathcal{C}\)</span>, of formal languages which is closed under inverse word homomorphism,
+    then <span class="latex-inline">\(\mathrm{W}(G,X)\)</span> is in the class <span class="latex-inline">\(\mathcal{C}\)</span> for some <span class="latex-inline">\(X\)</span> if and only if it is in the class <span class="latex-inline">\(\mathcal{C}\)</span> for any choice of <span class="latex-inline">\(X\)</span>.
+    The same can be said of the co-word problem and the full language of geodesics.
+</p>
+
+<p class="no-padding-below">
+    The following are open questions.
+</p>
+<ul>
+    <li>Does there exist a group with a word problem that is indexed but not context-free?</li>
+    <li>Is every group with an ET0L word problem virtually free?</li>
+</ul>
