@@ -1,0 +1,4 @@
+Sitemap: https://alexbishop.github.io/sitemap.xml
+
+User-agent: * 
+Disallow: /res/
