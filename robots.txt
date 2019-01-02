@@ -1,4 +1,9 @@
-Sitemap: https://alexbishop.github.io/sitemap.xml
+---
+layout: none
+---
+Sitemap: {{ "/sitemap.xml" | absolute_url }}
 
 User-agent: * 
-Disallow: /res/
+Disallow: 
+Allow: /
+
