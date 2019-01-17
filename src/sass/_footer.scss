@@ -1,0 +1,21 @@
+
+footer {
+  padding: 30px 0;
+  border-top: 1px $gray-300 solid;
+  margin-top: 50px;
+  font-size: 14px;
+  background-color: $gray-200;
+}
+
+footer a {
+  color: $body-color;
+}
+
+.custom-list-inline {
+  @include list-unstyled;
+}
+
+.custom-list-inline-item {
+  display: inline-block;
+  margin: $list-inline-padding/2;
+}

@@ -1,0 +1,126 @@
+
+Upcoming:
+
+  2019:
+    -
+      name: Australian Mathematics Society Conference
+      short-name: LATA&nbsp;2019
+      location: Saint Petersburg State University, Russia
+      website: http://lata2019.irdta.eu/
+      dates: 26 - 29 March, 2019
+      info:
+        talk: |
+          I will presenting a paper
+        arxiv: |
+          preprint <a href="https://arxiv.org/abs/1811.10157" target="_blank" rel="noreferrer">arXiv:1811.10157</a>
+
+    -
+      name: The Asia-Australia Algebra Conference 2019
+      short-name: AAAC&nbsp;2019
+      location: University of Western Sydney
+      website: http://sydneyalgebra.scem.westernsydney.edu.au/
+      dates: 21 - 25 January, 2019
+      info:
+        overleaf: |
+          I will present a <a href="https://www.overleaf.com/read/wdxqdtrqxdqj" target="_blank" rel="noreferrer">talk on co-ET0L groups</a>
+
+Previous:
+
+  2018:
+    -
+      name: Australian Mathematics Society Conference
+      short-name: AustMS&nbsp;2018
+      location: University of Adelaide
+      website: http://maths.adelaide.edu.au/austms2018/
+      dates: 4 - 7 December, 2018
+
+    -
+      name: AustMS Student Conference
+      short-name: AMSSC&nbsp;2018
+      location: University of South Australia
+      website: https://amssc.org/2018/
+      dates: 28 - 30 November, 2018
+
+    -
+      name: Geometric and Asymptotic Group Theory with Applications
+      short-name: GAGTA&nbsp;2018
+      location: Korean Institute for Advanced Studies
+      website: https://sites.google.com/view/gagta2018/home
+      dates: 15 - 20 July, 2018
+      info:
+        pdf: |
+          <a href="/assets/res/2018/gagta2018_poster.pdf" target="_blank" rel="noreferrer">I gave a poster on geodesic growth</a>
+
+    -
+      name: Trees, Dynamics and Locally Compact Groups
+      short-name: Trees&nbsp;2018
+      location: Heinrich-Heine-Universität Düsseldorf
+      website: http://reh.math.uni-duesseldorf.de/~internet/trees2018/
+      dates: 25 - 29 June, 2018
+      info:
+        pdf: |
+          <a href="/assets/res/2018/trees2018_talk.pdf" target="_blank" rel="noreferrer">I gave a talk on geodesic growth</a>
+        images: |
+          <a href="/assets/res/2018/trees2018_1.jpeg" target="_blank" rel="noreferrer">image&nbsp;1</a>, 
+          <a href="/assets/res/2018/trees2018_2.jpeg" target="_blank" rel="noreferrer">image&nbsp;2</a>, 
+          <a href="/assets/res/2018/trees2018_3.jpeg" target="_blank" rel="noreferrer">image&nbsp;3</a>
+
+    -
+      name: Workshop on Logic, Algebra and Category Theory
+      short-name: LAC&nbsp;2018
+      location: La Trobe University, Melbourne
+      website: http://www2.math.kyushu-u.ac.jp/~lac2018/
+      dates: 12 - 16 February, 2018
+
+
+    -
+      name: Quantum Computer Science School
+      short-name: QCSS&nbsp;2018
+      location: University of Technology Sydney
+      website: http://conference.iiis.tsinghua.edu.cn/QCSS2018/
+      dates: 21 - 26 January, 2018
+      info:
+        talk: I gave a short talk
+
+  2017:
+    -
+      name: Australian Mathematical Sciences Student Conference
+      short-name: AMSSC
+      location: University of Wollongong, Australia
+      website: https://www.amssc.org/2017/
+      dates: 6 - 8 December, 2017
+      info:
+        talk: I presented my Honours thesis
+
+    -
+      name: Australian Algebra Conference
+      short-name: AAC
+      location: University of Technology Sydney
+      website: http://aac2017.ltumathstats.com/
+      dates: 27 - 29 November, 2017
+      info:
+        talk: I presented my Honours thesis
+
+    -
+      name: Groups of Intermediate Growth in Seville
+      short-name: GIGS17
+      location: University of Seville, Spain
+      website: https://www.imus.us.es/GIGS17/
+      dates: 10 - 14 July, 2017
+
+    -
+      name: Geometric and Asymptotic Group Theory with Applications
+      short-name: GAGTA
+      location: University of Basque Country
+      website: https://sites.google.com/site/gagta2017/home
+      dates: 3 - 7 July, 2017
+
+    -
+      name: young Geometric and Asymptotic Group Theory with Applications
+      short-name: yGAGTA
+      location: University of Basque Country
+      website: https://sites.google.com/site/gagta2017/home
+      dates: 26 - 30 June, 2017
+
+
+

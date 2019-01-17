@@ -4,7 +4,6 @@ layout: null
 {
  "name": "{{ site.title }}",{% if site.short-title %}
  "short_name": "{{ site.short-title }}",{% endif %}
- "display": "standalone",
  "icons": [
   {
    "src": "/assets/icon/android-icon-36x36.png",
@@ -41,6 +40,16 @@ layout: null
    "sizes": "192x192",
    "type": "image/png",
    "density": "4.0"
+  },
+  {
+    "src": "/assets/icon/android-icon-512x512.png",
+    "type": "image/png",
+    "sizes": "512x512"
   }
- ]
+ ],
+ "start_url": "/",
+ "background_color": "{{ site.design.background-color }}",
+ "display": "standalone",
+ "scope": "/",
+ "theme_color": "{{ site.design.theme-color }}"
 }

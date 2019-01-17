@@ -1,0 +1,17 @@
+#!/bin/sh
+
+#echo
+#echo 'Installing Ruby Gems'
+#echo
+#
+#bundle install --path vendor/bundle
+
+echo
+echo 'Installing devDependencies for bootstrap.native'
+echo
+
+cd node_modules/bootstrap.native || exit 1
+npm install
+
+exit 0
+

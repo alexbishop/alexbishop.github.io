@@ -1,0 +1,47 @@
+/* Fallback styling for Font Awesome and Academicons */
+
+.fa:before,
+.fab:before,
+.far:before,
+.fas:before,
+.ai:before {
+  content: "\2022";
+}
+
+.fa,
+.fab,
+.far,
+.fas,
+.ai {
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.fa-pull-left {
+  float: left;
+}
+
+.fa-pull-right {
+  float: right;
+}

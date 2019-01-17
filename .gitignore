@@ -1,2 +1,4 @@
 _site/
 vendor/
+build_tmp/
+node_modules/

@@ -1,55 +1,43 @@
+
 <footer>
-  <div class="container beautiful-jekyll-footer">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center footer-links">
-          {%- for link in site.social-network-links -%}
-            {%- assign curkey = link[0] -%}
-            {%- assign element = site.data.SocialNetworks[curkey] -%}
-            <li>
-            {%- if curkey == 'rss' -%}
-              <a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="{{ element.name }}" target="_blank">
-            {%- elsif curkey == 'yelp' -%}
-              <a href="https://{{ site.social-network-links[curkey] }}.yelp.com" title="{{ element.name }}" target="_blank" rel="noreferrer">
-            {%- else -%}
-              <a href="{{element.baseURL}}{{ site.social-network-links[curkey] }}" title="{{ element.name }}" target="_blank" rel="noreferrer">
-            {%- endif -%}
-                <span class="fa-stack fa-lg" aria-hidden="true">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  {%- if element.icon contains "fa-" -%}
-                    <i class="{{ element.icon }} fa-stack-1x fa-inverse"></i>
-                  {%- else -%}
-                    <i class="{{ element.icon }} ai-1x fa-stack-1x fa-inverse"></i>
-                  {%- endif -%}
-                </span>
-                <span class="sr-only">{{ element.name }}</span>
-              </a>
-            </li>
-          {%- endfor -%}
-        </ul>
-      <p class="copyright text-muted">
-      {{ site.author.name }}
-      &nbsp;&bull;&nbsp;
-      {{ site.time | date: '%Y' }}
+<div class="container">
+  <div>
+    <div>
 
-      {% if site.url-pretty %}
-      &nbsp;&bull;&nbsp;
-      <a href="{{ site.url }}">{{ site.url-pretty }}</a>
-      {% endif %}
+      <ul class="custom-list-inline text-center footer-social-links">
+        {% for link in site.social-network-links %}
+          {% assign curkey = link[0] %}
+          {% assign element = site.data.social-networks[curkey] %}
+          <li class="custom-list-inline-item">
+          {% if curkey == 'rss' %}
+            <a href="{{ '/feed.xml' | absolute_url }}" title="{{ element.name }}" target="_blank">
+          {% elsif curkey == 'yelp' %}
+            <a href="https://{{ site.social-network-links[curkey] }}.yelp.com" title="{{ element.name }}" target="_blank" rel="noreferrer">
+          {% else %}
+            <a href="{{ element.baseURL }}{{ site.social-network-links[curkey] }}" title="{{ element.name }}" target="_blank" rel="noreferrer">
+          {% endif %}
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="{{ element.icon }} fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">{{ element.name }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
 
-      {% if site.matomo %}
-        {% if site.matomo.opt-out %}
-          &nbsp;&bull;&nbsp;
-          <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted"  rel="noreferrer">Do-not-Track</a>
-        {% endif %}
-      {% endif%}
+      <p class="text-muted text-center">
+        {{ site.author.name }}
+        &nbsp;&bull;&nbsp;
+        {{ site.time | date: '%Y' }}
       </p>
-          <!-- Please don't remove this, keep my open source work credited :) -->
-    <p class="theme-by text-muted">
-      Theme by
-      <a href="https://deanattali.com/beautiful-jekyll/" target="_blank" rel="noreferrer">beautiful-jekyll</a>
-    </p>
-      </div>
+
+      <p class="text-muted text-center">
+        Theme Inspired by
+        <a href="https://deanattali.com/beautiful-jekyll/" target="_blank" rel="noreferrer">beautiful-jekyll</a>
+      </p>
+
     </div>
   </div>
+</div>
 </footer>

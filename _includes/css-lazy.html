@@ -1,0 +1,11 @@
+<link
+  rel="stylesheet"
+  href="{{ include.url }}"
+  {%- if include.integrity %}
+  integrity="{{ include.integrity }}"
+  crossorigin="{% if include.crossorigin %}{{ include.crossorigin }}{% else %}anonymous{% endif %}"
+  {%- endif %}
+  media="print and (max-height:1px)" onload="if(media!='all')media='all'">
+<noscript>
+{% include css-critical.html -%}
+</noscript>

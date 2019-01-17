@@ -1,0 +1,34 @@
+
+.container {
+
+  @include make-container();
+  @include make-container-max-widths();
+
+  >* {
+
+    @include make-row();
+
+    >* {
+
+      position: relative;
+      width: 100%;
+      padding-right: $grid-gutter-width / 2;
+      padding-left: $grid-gutter-width / 2;
+
+      // col-md-10 offset-md-1
+
+      @include media-breakpoint-up(md, $grid-breakpoints) {
+        @include make-col(10, $grid-columns);
+        @include make-col-offset(1, $grid-columns);
+      }
+
+      // col-lg-8 offset-lg-2
+
+      @include media-breakpoint-up(lg, $grid-breakpoints) {
+        @include make-col(8, $grid-columns);
+        @include make-col-offset(2, $grid-columns);
+      }
+
+    }
+  }
+}

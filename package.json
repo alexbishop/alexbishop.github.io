@@ -1,0 +1,53 @@
+{
+  "name": "alexbishop.github.io",
+  "version": "1.0.0",
+  "description": "personal research website",
+  "keywords": [
+    "jekyll",
+    "github-pages"
+  ],
+  "homepage": "https://alexbishop.github.io",
+  "scripts": {
+    "postinstall": "./scripts/postinstall",
+    "test": "npm-run-all build-jekyll lint-html",
+    "serve": "/usr/bin/env bundler exec jekyll serve",
+    "build-jekyll": "/usr/bin/env bundler exec jekyll build",
+    "lint-html": "node scripts/vnu-jar.js",
+    "css": "npm-run-all css-compile build-jekyll css-purify css-prefix css-minify css-preamble",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 'src/sass/main.scss' 'build_tmp/css/main.css'",
+    "css-purify": "purifycss 'build_tmp/css/main.css' '_site/**/*.html' '_site/**/*.js' -o 'build_tmp/css/main-purified.css'",
+    "css-prefix": "postcss --config scripts/postcss.config.js --replace 'build_tmp/css/*.css' 'build_tmp/css/*.min.css'",
+    "css-minify": "cleancss --format beautify --output 'assets/css/main.scss' 'build_tmp/css/main-purified.css'",
+    "css-preamble": "preamble '--print=---\\n---\\n' -o assets/css/main.scss",
+    "js": "npm-run-all js-bootstrap.native js-uglify",
+    "js-bootstrap.native": "mkdir -p build_tmp/js && node 'node_modules/bootstrap.native/build-v4.js' --only dropdown collapse >'build_tmp/js/bootstrap-native-v4.js'",
+    "js-uglify": "uglifyjs --beautify -o ./assets/js/main.js ./build_tmp/js/*.js ./src/js/*.js"
+  },
+  "author": "Alex Bishop <alexbishop1234@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexbishop/alexbishop.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexbishop/alexbishop.github.io/issues"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.4",
+    "bootstrap": "^4.2.1",
+    "bootstrap.native": "^2.0.24",
+    "clean-css-cli": "^4.2.1",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.7",
+    "postcss-cli": "^6.1.0",
+    "preamble-cli": "^2.0.0",
+    "purify-css": "^1.2.5",
+    "uglify-js": "^3.4.9",
+    "vnu-jar": "^18.11.5"
+  }
+}

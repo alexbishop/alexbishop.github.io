@@ -1,37 +1,27 @@
 ---
-common-css:
-  - "/css/bootstrap-social.css"
-  - "/css/main.css"
-common-ext-css:
-  - "https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
-  - "https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
-  - "https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-common-googlefonts:
-  - "Lora:400,700,400italic,700italic"
-  - "Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
-common-js:
-  - "/js/main.js"
-common-ext-js:
-  - "https://code.jquery.com/jquery-3.3.1.min.js"
-  - "https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"
-title-prefix: "Alex Bishop - "
+layout: null
 ---
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+
   {% include head.html %}
 
   <body>
 
-    {% include gtm_body.html %}
-  
-    {% include nav.html %}
+    <div style="flex: 1 0 auto">
+      {% include nav.html %}
 
-    {{ content }}
+      {{ content }}
 
-    {% include footer.html %}
-  
-    {% include footer-scripts.html %}
-  
+    </div>
+
+    <div style="flex-shrink: 0">
+
+      {% include footer.html %}
+    
+      {% include footer-scripts.html %}
+
+    </div>
+
   </body>
 </html>

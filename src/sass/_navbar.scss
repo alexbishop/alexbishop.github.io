@@ -1,0 +1,103 @@
+.avatar-container, .avatar-container_hidden {
+
+  position: absolute;
+  left: 50%;
+  width: 50px;
+  margin-left: -50px;
+
+  margin-top: -25px;
+  transition: margin .5s ease-in-out;
+
+  @include media-breakpoint-up(md, $grid-breakpoints) {
+    margin-top: -75px;
+    transition: margin .5s ease-in-out;
+  }
+
+}
+
+.custom-navbar-wrapper-expanded .avatar-container img {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .5s linear;
+}
+
+.avatar-container_hidden img,
+.custom-navbar-wrapper-collapsed .avatar-container img {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .5s, opacity .5s linear;
+}
+
+.navbar-after-padding {
+
+  padding-bottom: 75px;
+  transition: padding .5s ease-in-out;
+
+  @include media-breakpoint-up(md, $grid-breakpoints) {
+    padding-bottom: 25px;
+    transition: padding .5s ease-in-out;
+  }
+
+  margin-bottom: .25rem;
+}
+
+.navbar li a.nav-link {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.navbar .navbar-brand,
+.navbar li a.nav-link {
+  padding-left:  0.75rem;
+  padding-right: 0.75rem;
+  font-weight: 600;
+  color: $black;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus ,
+.navbar .nav li a.nav-link:hover,
+.navbar .nav li a.nav-link:focus {
+  color: $link-color;
+}
+
+.navbar {
+  background-color: $gray-200;
+  border-bottom: 1px $gray-300 solid;
+}
+
+@include media-breakpoint-up(md, $grid-breakpoints) {
+
+    .navbar >* {
+        margin-top: 0;
+        margin-bottom: 0;
+        transition: margin .5s ease-in-out;
+    }
+
+    .custom-navbar-wrapper-expanded .navbar >* {
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: margin .5s ease-in-out;
+    }
+
+}
+
+.navbar .navbar-brand, .navbar-light .navbar-nav .nav-link {
+  color: $body-color;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu{
+  margin-top:0px;
+}
+
+
+.hideme * {
+  visibility: hidden !important;
+}
+

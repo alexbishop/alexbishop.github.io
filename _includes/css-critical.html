@@ -1,0 +1,7 @@
+<link
+  rel="stylesheet"
+  href="{{ include.url }}"
+  {%- if include.integrity %}
+  integrity="{{ include.integrity }}"
+  crossorigin="{% if include.crossorigin %}{{ include.crossorigin }}{% else %}anonymous{% endif %}"
+  {%- endif %}>

@@ -1,0 +1,58 @@
+
+{% if page.share-info.title %}
+<meta property="og:title" content="{{ page.share-info.title }}">
+{% elsif page.title %}
+<meta property="og:title" content="{{ page.title }}">
+{% else %}
+<meta property="og:title" content="{{ site.title }}">
+{% endif %}
+
+{% if page.share-info.description %}
+<meta property="og:description" content="{{ page.share-info.description }}">
+{% elsif page.subtitle %}
+<meta property="og:description" content="{{ page.subtitle }}">
+{% else %}
+<meta property="og:description" content="{{ site.description }}">
+{% endif %}
+
+{% if page.share-info.type %}
+<meta property="og:type" content="{{ page.share-info.type }}">
+{% else %}
+<meta property="og:type" content="website">
+{% endif %}
+
+<meta property="og:url" content="{{ page.url | remove: '/index.html' | remove: '.html' | absolute_url }}">
+<link rel="canonical" href="{{ page.url | remove: '/index.html' | remove: '.html' | absolute_url }}">
+
+{% if page.share-img %}
+<meta property="og:image" content="{{ page.share-img  | absolute_url }}">
+{% elsif site.avatar %}
+<meta property="og:image" content="{{ site.avatar | absolute_url }}">
+{% endif %}
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@{{ site.social-network-links.twitter }}">
+<meta name="twitter:creator" content="@{{ site.social-network-links.twitter }}">
+
+{% if page.share-info.title %}
+<meta name="twitter:title" content="{{ page.share-info.title }}">
+{% elsif page.title %}
+<meta name="twitter:title" content="{{ page.title }}">
+{% else %}
+<meta name="twitter:title" content="{{ site.title }}">
+{% endif %}
+
+{% if page.share-info.description %}
+<meta name="twitter:description" content="{{ page.share-info.description }}">
+{% elsif page.subtitle %}
+<meta name="twitter:description" content="{{ page.subtitle }}">
+{% else %}
+<meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+
+{% if page.share-img %}
+<meta name="twitter:image" content="{{ page.share-img | absolute_url }}">
+{% elsif site.avatar %}
+<meta name="twitter:image" content="{{ site.avatar | absolute_url }}">
+{% endif %}
+

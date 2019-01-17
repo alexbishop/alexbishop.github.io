@@ -1,33 +1,55 @@
 ---
 layout: page
-title: Papers
-prefix-site-title: true
-description: A list of my recent papers and preprints.
 
-meta-title: "Alex Bishop - Papers"
-meta-description: "Recent papers and preprints."
-#share-img: "/test.jpg"
+title: Papers
+description: "A list of my recent papers both published and in preprint."
+
+share-info:
+  title: "Alex Bishop - Papers"
+  description: "Papers both published and preprints."
 ---
 
-<div class="panel panel-default">
-<div class="panel-heading"><i>to appear</i></div>
-<div class="panel-body">
+{%- for type in site.data.papers -%}
 
-<div class="well">
-  <strong>Bounded Automata Groups are co-ET0L</strong>
+{%- if forloop.first == false -%}
 <br>
-  Authors:
-    Alex Bishop
-  and
-    <a href="https://sites.google.com/site/melderau" target="_blank">Murray Elder</a>
-<br>
-  Preprint:
-    <a href="https://arxiv.org/abs/1811.10157" target="_blank">arXiv:1811.10157</a>
-<br>
-  Comment: Accepted into the preceedings of
-    <a href="http://lata2019.irdta.eu/" target="_blank" title="13th International Conference on Language and Automata Theory and Applications">LATA 2019</a>
+{%- endif -%}
+
+<div class="card">
+  <h3 class="card-header">
+    <a data-toggle="collapse" href="#collapse-paper{{ forloop.index }}" aria-expanded="true" aria-controls="collapse-paper{{ forloop.index }}" id="heading-paper{{ forloop.index }}" class="d-block">
+      <i class="fa fa-chevron-down fa-pull-right"></i>
+    </a>
+    {{ type[0] }}
+  </h3>
+  <div id="collapse-paper{{ forloop.index }}" class="collapse show" aria-labelledby="heading-paper{{ forloop.index }}">
+  <div class="card-body">
+
+  {%- for paper in type[1] -%}
+
+    {%- if forloop.first == false -%}
+    <hr>
+    {%- endif -%}
+
+    <h4 class="card-title">{{ paper.title }}</h4>
+    <table>
+    {%- for data in paper -%}
+    {%- if data[0] != 'title' -%}
+
+      <tr>
+        <td class="align-top text-right font-italic pr-1">{{ data[0] }}:</td>
+        <td>{{ data[1] }}</td>
+      </tr>
+
+    {%- endif -%}
+    {%- endfor -%}
+    </table>
+
+  {%- endfor -%}
+
+  </div>
+  </div>
 </div>
 
-</div>
-</div>
+{%- endfor -%}
 

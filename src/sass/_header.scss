@@ -1,0 +1,65 @@
+
+/* default page header style */
+
+header {
+
+  h1, h2, hr {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 900;
+  }
+
+  hr {
+    max-width: 100px;
+    margin: 15px auto;
+    border-width: 4px;
+    border-color: inherit;
+    border-radius: 3px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  padding-bottom: 1rem;
+
+}
+
+/* header style for a post */
+
+header.post-header {
+
+  h1, h2 {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  hr {
+    display: none;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .post-header_meta {
+    color: $gray-600;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+}
+
+
+
