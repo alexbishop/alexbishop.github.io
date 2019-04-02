@@ -1,5 +1,5 @@
 
-Upcoming:
+Previous:
 
   2019:
     -
@@ -10,13 +10,12 @@ Upcoming:
       dates: 26 - 29 March, 2019
       info:
         talk: |
-          I will presenting a paper
+          I presented a paper
         arxiv: |
           preprint <a href="https://arxiv.org/abs/1811.10157" target="_blank" rel="noreferrer">arXiv:1811.10157</a>
+        overleaf: |
+          <a href="https://www.overleaf.com/read/fszxrytdfkcz" target="_blank" rel="noreferrer">slides</a>
 
-Previous:
-
-  2019:
     -
       name: The Asia-Australia Algebra Conference 2019
       short-name: AAAC&nbsp;2019
