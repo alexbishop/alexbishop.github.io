@@ -8,6 +8,7 @@
         {% for link in site.social-network-links %}
           {% assign curkey = link[0] %}
           {% assign element = site.data.social-networks[curkey] %}
+        {% if curkey != 'twitter' %}
           <li class="custom-list-inline-item">
           {% if curkey == 'rss' %}
             <a href="{{ '/feed.xml' | absolute_url }}" title="{{ element.name }}" target="_blank">
@@ -23,6 +24,7 @@
               <span class="sr-only">{{ element.name }}</span>
             </a>
           </li>
+        {% endif %}
         {% endfor %}
       </ul>
 
