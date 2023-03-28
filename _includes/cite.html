@@ -1,0 +1,16 @@
+{%- assign citelist = include.cites | split: "," -%}
+{%- assign first = true -%}
+[{% for ref in page.references -%} 
+  {%- assign index = forloop.index -%}
+  {%- for c in citelist -%}
+    {%- if c == ref.id -%}
+      {%- if first == false -%}
+        ,&nbsp;
+      {%- endif -%}
+      <a href="#cite:{{ ref.id }}">{{ index }}</a>
+      {%- assign first = false -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor %}]
+

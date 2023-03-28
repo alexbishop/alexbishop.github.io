@@ -1,0 +1,49 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <ul class="contact-list">
+          {% if site.author.name -%}
+            <li class="p-name">{{ site.author.name | escape }}</li>
+          {% endif -%}
+          {% if site.author.email -%}
+            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {%- endif %}
+          {% if site.author.work_email -%}
+            <li><a class="u-email" href="mailto:{{ site.author.work_email }}">{{ site.author.work_email }}</a></li>
+          {%- endif %}
+        </ul>
+        <ul class="contact-list">
+          {% if site.author.orcid -%}
+          <li>ORCID: <a href="https://orcid.org/{{ site.author.orcid }}" title="orcid" target="_blank">{{ site.author.orcid }}</a></li>
+          {%- endif %}
+          {% if site.author.arxiv -%}
+          <li>arXiv: <a href="https://arxiv.org/a/{{ site.author.arxiv }}" title="arXiv" target="_blank">{{ site.author.arxiv }}</a></li>
+          {%- endif %}
+          {% if site.author.github -%}
+          <li>GitHub: <a href="https://github.com/{{ site.author.github }}" title="arXiv" target="_blank">{{ site.author.github }}</a></li>
+          {%- endif %}
+        </ul>
+      </div>
+      <div class="footer-col">
+        {{% if site.author.address -%}}
+        <strong>Address:</strong>
+        <ul class="contact-list">
+          {% for line in site.author.address -%}
+            <li>{{ line | escape }}</li>
+          {%- endfor %}
+        </ul>
+        {{%- endif %}}
+      </div>
+    </div>
+
+    <div class="social-links">
+      {%- include social.html -%}
+    </div>
+
+  </div>
+
+</footer>

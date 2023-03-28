@@ -1,0 +1,41 @@
+<script>
+  mathjax = {
+    options: {
+      renderactions: {
+        addcopytext: [155,
+          (doc) => {for (const math of doc.math) mathjax.config.addcopytext(math, doc)},
+          (math, doc) => mathjax.config.addcopytext(math, doc)
+        ]
+      }
+    },
+    addcopytext(math, doc) {
+      const adaptor = doc.adaptor;
+      const text = adaptor.node('mjx-copytext', {'aria-hidden': true}, [
+        adaptor.text(math.start.delim + math.math + math.end.delim)
+      ]);
+      adaptor.append(math.typesetroot, text);
+    },
+    startup: {
+      ready() {
+        mathjax._.output.chtml_ts.chtml.commonstyles['mjx-copytext'] = {
+          display: 'inline-block',
+          position: 'absolute',
+          top: 0, left: 0, width: 0, height: 0,
+          opacity: 0,
+          overflow: 'hidden'
+        };
+        mathjax.startup.defaultready();
+      }
+    }
+  }
+</script>
+
+<script src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js' async></script>
+<style>
+  mjx-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    padding:0.1rem 0.2rem;
+  }
+</style>

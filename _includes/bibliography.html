@@ -1,0 +1,5 @@
+<ol style="list-style-type: decimal">
+  {% for ref in page.references -%}
+  <li id="cite:{{ ref.id }}">{{ ref.content }}</li>
+  {%- endfor %}
+</ol>

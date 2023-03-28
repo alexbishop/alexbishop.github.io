@@ -1,0 +1,65 @@
+title: Alex Bishop
+tagline: A description of my research topics
+locale: en_AU
+
+author:
+  name: Alex Bishop
+  email: "alexbishop1234@gmail.com"
+  twitter: AbstractProof
+  work_email: "alexander.bishop@unige.ch"
+  arxiv: "bishop_a_2"
+  orcid: "0000-0001-6803-1143"
+  github: "alexbishop"
+  researchgate: "Alex_Bishop7"
+  address:
+    - Section de mathématiques
+    - Université de Genève
+    - rue du Conseil-Général 7-9
+    - 1205 Genève, Switzerland
+
+email: alexbishop1234@gmail.com
+
+twitter:
+  username: AbstractProof
+  creator: AbstractProof
+
+description: >-
+  The personal website for Alex Bishop.
+  A PostDoc at the University of Geneva who studies topics
+  in Geometric Group Theory and Formal Language Theory.
+baseurl: ""
+url: "https://alexbishop.github.io"
+
+header_pages:
+  - photo.html
+  - papers.html
+  - research.html
+#  - blog.html
+
+minima:
+  skin: solarized
+  date_format: "%A, %-d %B %Y"
+ 
+permalink: /blog/:categories/:year/:month/:day/:slug
+
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+  
+# commit as of 28 March 2023
+remote_theme: jekyll/minima@2863624
+
+# Exclude these files from production site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - MINIMA_LICENCE.txt
+  - README.md
+  - vendor
+  - node_modules
+  - build_tmp
+  - scripts
+  - src
+  - package.json
+  - package-lock.json
