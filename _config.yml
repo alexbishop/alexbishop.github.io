@@ -53,5 +53,5 @@ remote_theme: jekyll/minima@2863624
 exclude:
   - Gemfile
   - Gemfile.lock
-  - LICENSE
+  - LICENSE.txt
   - README.md
