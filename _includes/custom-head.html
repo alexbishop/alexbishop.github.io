@@ -1,30 +1,30 @@
 <script>
-  mathjax = {
+  MathJax = {
     options: {
-      renderactions: {
-        addcopytext: [155,
-          (doc) => {for (const math of doc.math) mathjax.config.addcopytext(math, doc)},
-          (math, doc) => mathjax.config.addcopytext(math, doc)
+      renderActions: {
+        addCopyText: [155,
+          (doc) => {for (const math of doc.math) MathJax.config.addCopyText(math, doc)},
+          (math, doc) => MathJax.config.addCopyText(math, doc)
         ]
       }
     },
-    addcopytext(math, doc) {
+    addCopyText(math, doc) {
       const adaptor = doc.adaptor;
       const text = adaptor.node('mjx-copytext', {'aria-hidden': true}, [
         adaptor.text(math.start.delim + math.math + math.end.delim)
       ]);
-      adaptor.append(math.typesetroot, text);
+      adaptor.append(math.typesetRoot, text);
     },
     startup: {
       ready() {
-        mathjax._.output.chtml_ts.chtml.commonstyles['mjx-copytext'] = {
+        MathJax._.output.chtml_ts.CHTML.commonStyles['mjx-copytext'] = {
           display: 'inline-block',
           position: 'absolute',
           top: 0, left: 0, width: 0, height: 0,
           opacity: 0,
           overflow: 'hidden'
         };
-        mathjax.startup.defaultready();
+        MathJax.startup.defaultReady();
       }
     }
   }
