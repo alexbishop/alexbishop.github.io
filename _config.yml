@@ -45,7 +45,8 @@ permalink: /blog/:categories/:year/:month/:day/:slug
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
-  
+  - jekyll-sitemap
+
 # commit as of 28 March 2023
 remote_theme: jekyll/minima@2863624
 
