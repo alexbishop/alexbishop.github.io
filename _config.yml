@@ -42,6 +42,9 @@ minima:
  
 permalink: /blog/:categories/:year/:month/:day/:slug
 
+webmaster_verifications:
+  google: "tQo-9SLQ-5vu39gkwKlQgPNSvuO7hnuEoDl_ff4BZGo"
+
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
