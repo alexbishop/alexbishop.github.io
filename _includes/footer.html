@@ -29,11 +29,9 @@
       <div class="footer-col">
         {{% if site.author.address -%}}
         <strong>Address:</strong>
-        <ul class="contact-list">
-          {% for line in site.author.address -%}
-            <li>{{ line | escape }}</li>
-          {%- endfor %}
-        </ul>
+        {% for line in site.author.address -%}
+          <br>{{ line | escape }}
+        {%- endfor %}
         {{%- endif %}}
       </div>
     </div>
