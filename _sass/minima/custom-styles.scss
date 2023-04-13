@@ -1,0 +1,11 @@
+figure {
+  display: block;
+  text-align: center;
+
+  svg {
+    width: 100%;
+    @media screen and (min-width: $on-medium) {
+      width: 50%;
+    }
+  }
+}

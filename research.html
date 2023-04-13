@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_with_toc
 title: Research
 description: A brief summary of some of my current research interests in maths.
 permalink: /research/
@@ -83,11 +83,11 @@ references:
       vol.&nbsp;105, 1955, pp.&nbsp;32–34. 
 ---
 
-<h3>Notation &amp; Background</h3>
+<h2 id="sec:notation">Notation &amp; Background</h2>
 
 <p>
   Let \(\mathcal{P}\) be some property of groups, for example, abelian, nilpotent, or free.
-  A group \(G\) is said to <em>virtualy</em> \(\mathcal{P}\) if it has a finite-index subgroup \(H\) with has property \(\mathcal{P}\).
+  A group \(G\) is said to <em>virtually</em> \(\mathcal{P}\) if it has a finite-index subgroup \(H\) with has property \(\mathcal{P}\).
 </p>
 
 <p>
@@ -116,7 +116,7 @@ references:
   If \(w\in X^*\) is a word with \(\overline{w}=g\in G\) and \(\ell_X(g) = |w|_X\), then we say that \(w\) is a <em>geodesic</em>.
 </p>
 
-<strong>A brief history of growth:</strong>
+<h3 id="sec:notation/history">A brief history of growth:</h3>
 
 <p>
   From the definitions above, we can define the <em>volume growth function</em> of a group as
@@ -135,32 +135,30 @@ references:
     C\cdot g(C\cdot n) \geqslant f(n).
   \]
   It is a well-known result, proven independently by Švarc&nbsp;{% include cite.html cites="svarc1955" %} and Milnor&nbsp;{% include cite.html cites="milnor1968" %},
-  that(, with respect to the above equivalence relation,) the growth function \(\gamma_X(n)\) is invariant under change of generating set and <em>quasi-isometry</em>.
+  that the volume growth function \(\gamma_X(n)\) is invariant under change of generating set and <em>quasi-isometry</em> with respect to the above equivalence relation.
   From this, it was noticed that every group known in the 1960's had growth that was either equivalent to a polynomial, or equivalent to an exponential.
 </p>
 
-In 1968, Milnor&nbsp;{% include cite.html cites="milnor1968b" %} asked the following two questions:
+<p>In 1968, Milnor&nbsp;{% include cite.html cites="milnor1968b" %} asked the following two questions:</p>
 <ol>
   <li>Is there a characterisation of groups with polynomial growth?</li>
   <li>Are there groups of intermediate growth (i.e.&nbsp;neither polynomial nor exponential)?</li>
 </ol>
 
 <p>
-  The first of Milnor's questions was answered by in 1981 by Gromov&nbsp;{% include cite.html cites="gromov1981" %} who showed that a group has
+  The first of Milnor's questions was answered in 1981 by Gromov&nbsp;{% include cite.html cites="gromov1981" %} who showed that a group has
   polynomial growth if and only if it is <em>virtually nilpotent</em>.
   Milnor's second question was answered in 1984 by Grigorchuk&nbsp;{% include cite.html cites="grigorchuk1984" %} where it was shown that there
   exists a group of intermediate growth.
 </p>
 
-<p>
-  We note here that Grigorchuk's example sparked a great interest in the study of groups of intermediate growth, and of similarly defined
-  groups.
-</p>
+<h2 id="sec:geodesic">Topic: Geodesic Growth</h2>
 
-<h3>Topic: Geodesic Growth</h3>
+<h3 id="sec:geodesic/definition">Definition</h3>
 
 <p>
-  Let \(G\) be a group with finite generating set \(X\), then the <em>geodesic growth</em> is defined as
+  Let \(G\) be a group with finite generating set \(X\), then the <em>geodesic growth function</em> \(a_X(n)\) counts the number of geodesics with length at most \(n\).
+  That is,
   \[
     a_X(n)
     :=
@@ -170,55 +168,140 @@ In 1968, Milnor&nbsp;{% include cite.html cites="milnor1968b" %} asked the follo
       \ell_X(\overline{w}) = |w|_X \leqslant n
     \}.
   \]
-  That is, \(a_X(n)\) counts the number of geodesic words in \(X^*\) with length at most \(n\).
+  We then notice that each element of \(G\) has at least one geodesic.
 </p>
-geodessic
-We then ask a modified version of Milnor's questions&nbsp;{% include cite.html cites="milnor1968b" %} for geodesic growth.
-That is,
+
+<p>
+  To study the asymptotics of the function \(a_X(n)\), it is often helpful to find nice closed forms for the <em>geodesic growth series</em>
+  \[
+    A_X(z)
+    =
+    \sum_{n=0}^\infty
+    a_X(n) \, z^n.
+  \]
+  For example, if \(A_X(n)\) is a rational series (i.e.&nbsp;there are polynomials \(P(z)\) and \(Q(z)\) such that \(A_X(z)=P(z)/Q(z)\)),
+  then there would exist finitely many polynomials \(f_1(n)\), \(f_2(n)\), &hellip;, \(f_k(n)\) and a constant \(N \geqslant 0\) such that
+  \[
+    a_X(n)
+    =
+    f_1(n) \gamma_1^{-n}
+    +f_2(n) \gamma_2^{-n}
+    +\cdots
+    +f_k(n) \gamma_k^{-n}
+  \]
+  for all \(n \geqslant N\), where \(\gamma_i\) are the singularities of the series \(A_X(n)\).
+</p>
+
+<h3 id="sec:geodesic/defintion">Observation &amp; Examples</h3>
+
+<p>
+  The geodesic growth \(a_X(n)\) is bound from below by the volume growth \(\gamma_X(n)\). 
+  Thus, if \( a_X(n) \) has a polynomial upper bound, then the group must be a virtually nilpotent group.
+</p>
+
+<p>
+  Unlike volume growth, geodesic growth function depends heavily on the chosen generating set.
+  For example, take the virtually cyclic group
+  \[
+    \mathbb{Z} \times C_2
+    =
+    \left\langle
+      z,t
+    \mid
+      t^2 = 1,\ zt=tz
+    \right\rangle.
+  \]
+  A part of the Cayley graph of \(\mathbb{Z} \times C_2\), with respect to the generating set \(X = \{z,z^{-1}, t\}\) is given in Figure&nbsp<a href="#fig1">1</a>.
+  For this generating set, the group has polynomial geodesic growth, in particular,
+  \(
+    a_X(n)
+    =
+    n^2+3n
+  \)
+  for each \(n \geqslant 2 \).
+</p>
+
+<figure id="fig1">
+  {% include svg/fig1.svg %}
+  <figcaption>Figure&nbsp;1:&nbsp;Cayley graph of \(\mathbb{Z}\times C_2\) with respect to generating set \(X = \{z,z^{-1}, t\}\).</figcaption>
+</figure>
+
+<p>
+  Now consider the group \(\mathbb{Z} \times C_2\), with respect to the generating set \(X = \{zt, z^{-1} t, z, z^{-1}\}\) as in Figure&nbsp<a href="#fig2">2</a>.
+  In this case, the geodesic growth is exponential, in particular,
+  \(
+    a_X(n) = 2^{n+1}-1
+  \).
+</p>
+
+<figure id="fig2">
+  {% include svg/fig2.svg %}
+  <figcaption>Figure&nbsp;2:&nbsp;Cayley graph of \(\mathbb{Z}\times C_2\) with respect to generating set \(X = \{zt, z^{-1} t, z, z^{-1}\}\).</figcaption>
+</figure>
+
+<p>
+  Thus, when we speak of the geodesic growth of a group, we must always specify a generating set.
+</p>
+
+<h3 id="sec:geodesic/literature">Literature</h3>
+
+<p>Two natural questions then arrise:</p>
 <ol>
   <li>Is there a characterisation of groups with polynomial geodesic growth?</li>
   <li>Are there groups of intermediate geodesic growth (i.e.&nbsp;neither polynomial nor exponential)?</li>
 </ol>
 
 <p>
-  Since each element has at least one geodesic, that the geodesic growth function is bound from below by the 
-  volume growth, that is, \( a_X(n) \geqslant \gamma_X(n) \) for every \(n \geqslant 0\).
-  Thus, we see that the geodesic growth is bounded from below by the volume growth.
-  From this, we see that every group with polynomial geodesic growth is virtually nilpotent.
-</p>
-
-<p>
   The geodesic growth of the nilpotent and virtually abelian groups was studied by Bridson, Burillo, Elder and Šunić&nbsp;{% include cite.html cites="BBES2012" %}.
-  In this work, the authors showed that showed that every nilpotent group is either virtually abelian, or has exponential geodesic growth with respect to all generating sets;
-  and they gave the first example of a group with polynoial geodesic growth which is not cirtually cyclic (in particular, this example was virtually \(\mathbb{Z}^2\)).
+  In this work, the authors showed that showed that every nilpotent group is either virtually abelian, or has exponential geodesic growth with respect to every generating sets;
+  and they gave the first example of a group
+  \[
+    \mathbb{Z}^2 \rtimes C_2
+    =
+    \left\langle
+    x,y,t
+    \mid
+    xy=yx, t^2=1, txt=y
+    \right\rangle
+  \]
+  with polynomial geodesic growth (with respect to the generating set \(\{x,x^{-1},y,y^{-1}\}\)) and is not virtually cyclic.
 </p>
 
 <p>
-  The problem of whether there exists a group of intermediate geodesic growth was studied in the thesis of Brönnimann&nbsp;{% include cite.html cites="broennimann2016" %}
-  where many of the groups which were known to have intermediate volume growth were considered.
-  In particular, Brönnimann showed that in all examples, except for one, the group geodesic growth is exponential for all generating sets.
+  The problem of whether there exists a group of intermediate geodesic growth was studied in the thesis of Brönnimann&nbsp;{% include cite.html cites="broennimann2016" %}.
+  In particular, Brönnimann showed that in almost all groups of intermediate growth (which were known at the time), the geodesic growth is exponential for the usual generating set. 
   The one example where Brönnimann's techniques did not work is referred to as the Fabrykowski-Gupta group.
 </p>
 
-<strong>Personal Contributions</strong>
+<h3 id="sec:geodesic/question">Personal Contributions</h3>
 
 <ul>
-  <li>Characterised the geodesic growth for virtually abelian groups in {% include cite.html cites="bishop2021" %}.
-    This showed that virtually abelian groups cannot have intermediate geodesic growth.</li>
+  <li>Characterised the geodesic growth for virtually abelian groups&nbsp;{% include cite.html cites="bishop2021" %}.<br>
+    Main results:
+    <ul>
+      <li>virtually abelian groups cannot have intermediate geodesic growth;</li>
+      <li>for virtually abelian groups,
+        the geodesic growth is either exponential with <em>D-finite</em> generating function,
+        or polynomial with rational generating function and</li>
+      <li>the set of all geodesics of a virtually abelian group forms a <em>blind multicounter language</em>.
+    </ul>
+    All of the above results hold for every finite (weighted monoid) generating set.
+  </li>
   <li>In a joint work with Murray Elder&nbsp;{% include cite.html cites="bishop2022" %}, we showed that there exists a virtually
     2-step nilpotent group with polynomial geodesic growth.
-    Previously, it was conjectured that all groups of polynomial geodesic growth all virtually abelian.</li>
+    Previously, it was conjectured that all groups of polynomial geodesic growth were virtually abelian.</li>
 </ul>
 
-<strong>Open Questions</strong>
+<h3 id="sec:geodesic/open">Open Problems</h3>
 
 <ul>
+  <li>Is the geodesic growth series for the group introduced in&nbsp;{% include cite.html cites="bishop2022" %} rational?</li>
   <li>Is there an intermediate growth group with intermediate geodesic growth?</li>
   <li>Is there a characterisation of groups with polynomial geodesic growth?</li>
-  <li>Is there a virtually abelian group without rational geodesic growth</li>
+  <li>Is there a virtually abelian group without rational geodesic growth?</li>
 </ul>
 
-<h3>Topic: Word Problems &amp; Cogrowth</h3>
+<h2 id="sec:wordprob">Topic: Word Problems &amp; Cogrowth</h2>
 
 <p>
 Let \(G\) be a group with generating set \(X\), then the <em>word problem</em> is the set of words
@@ -254,17 +337,17 @@ That is, \(\mathrm{WP}_X\) is the set of all words which evaluate to the group i
   That is, \(\mathrm{coWP}_X\) is the set of words which do not evaluate to the group identity.
 </p>
 
-<strong>Open Questions</strong>
+<h3 id="sec:wordprob/open">Open Questions</h3>
 
 <ul>
-  <li>Is the coword problem for Grigorchuk's (or a similarly defined) groupcontext-free language?</li>
+  <li>Is the coword problem for Grigorchuk's (or a similarly defined) context-free language?</li>
   <li>Is the word problem for Grigorchuk's (or a similarly defined)
     group an Indexed language, as defined by Aho&nbsp;{% include cite.html cites="aho1968" %}?</li>
   <li>If a group has a coword problem that is context-free, then is that group a subgroup of Thompson's group V?</li>
   <li>If a group has an algebraic cogrowth series, then is it virtually free?</li>
 </ul>
 
-<h3>References</h3>
+<h2 id="sec.references">References</h2>
 
 {% include bibliography.html %}
 
