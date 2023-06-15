@@ -59,3 +59,4 @@ exclude:
   - Gemfile.lock
   - LICENSE.txt
   - README.md
+  - vendor
