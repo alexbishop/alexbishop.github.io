@@ -19,7 +19,8 @@ references:
 
 <h2>Definitions</h2>
 
-<p>A set subset of \(\mathbb{Z}^k\) is called <em>semilinear</em> if it can be written as a finite union of <em>linear</em> sets of the form
+<p><strong id="def.1">Definition 1</strong> (Semilinear sets):
+A subset of \(\mathbb{Z}^k\) is called <em>semilinear</em> if it can be written as a finite union of <em>linear</em> sets of the form
 \[
   L(\vec u,\{\vec v_1,\vec v_2,...,\vec v_p\})
   =
@@ -29,8 +30,48 @@ references:
     k_1,k_2,...,k_p\in \mathbb{N}
   \}
 \]
-  where \(\vec u,\vec v_1,...,\vec v_p \in \mathbb{Z}^k\). {% include cite.html cites="is1" %}
+  where \(\vec u,\vec v_1,...,\vec v_p \in \mathbb{Z}^k\).
 </p>
+
+<p><strong>Definition</strong> (Unambiguous semilinear):
+  We say that a semilinear set is <em>unambiguous</em> if it can be written as a disjoint union
+  \[
+    \bigcup_{i=1}^m
+  L(\vec u_i,\{\vec v_{i,1},\vec v_{1,2},...,\vec v_{i,p_i}\})
+  \]
+  where each set \(\{\vec v_{i,1},\vec v_{1,2},...,\vec v_{i,p_i}\}\) is linearly independent as vectors in \(\mathbb{Q}^k\).
+</p>
+
+<p>
+  Notice then that an unambiguous semilinear set has a rational generating function.
+  In particular, if 
+</p>
+
+
+<p><strong id="def.2">Definition 2</strong> (Polyhedral sets):
+  A subset of \(\mathbb{Z}^k\) is called <em>(Benson) polyhedral</em> if it can be written using unions and intersections of sets of the form
+  \[
+    \{
+      \vec z\in \mathbb{Z}^k
+    \mid
+      \vec a \cdot \vec z \geqslant b
+    \}
+  \]
+  and
+  \[
+    \{
+      \vec z \in \mathbb{Z}^k
+    \mid
+      \vec a \cdot \vec z \equiv b\ \mathrm{mod}\ c
+    \}
+  \]
+  where \(\vec a \in \mathbb{Z}^k\) and \(b,c \in \mathbb{Z}\).
+</p>
+
+<h2>Lemmas</h2>
+
+
+
 
 <h2>References</h2>
 
