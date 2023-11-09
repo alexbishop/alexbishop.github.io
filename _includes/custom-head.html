@@ -1,42 +1,24 @@
-<script>
-  MathJax = {
-    options: {
-      renderActions: {
-        addCopyText: [155,
-          (doc) => {for (const math of doc.math) MathJax.config.addCopyText(math, doc)},
-          (math, doc) => MathJax.config.addCopyText(math, doc)
-        ]
-      }
-    },
-    addCopyText(math, doc) {
-      const adaptor = doc.adaptor;
-      const text = adaptor.node('mjx-copytext', {'aria-hidden': true}, [
-        adaptor.text(math.start.delim + math.math + math.end.delim)
-      ]);
-      adaptor.append(math.typesetRoot, text);
-    },
-    startup: {
-      ready() {
-        MathJax._.output.chtml_ts.CHTML.commonStyles['mjx-copytext'] = {
-          display: 'inline-block',
-          position: 'absolute',
-          top: 0, left: 0, width: 0, height: 0,
-          opacity: 0,
-          overflow: 'hidden'
-        };
-        MathJax.startup.defaultReady();
-      }
-    }
-  }
-</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+  integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+  integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"
+  integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A" crossorigin="anonymous"></script>
+
 <style>
-  mjx-container {
-    overflow-x: auto;
-    overflow-y: hidden;
-    max-width: 100%;
-    padding:0.1rem 0.2rem;
-  }
+.katex-display { overflow: auto hidden }
+
+.katex-display > .katex { white-space: normal }
+/* Add space between broken lines: */
+.katex-display > .base { margin: 0.25em 0 }
+/* Compensate by reducing space around display math */
+.katex-display { margin: 0.5em 0; }
 </style>
