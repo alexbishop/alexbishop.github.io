@@ -9,3 +9,11 @@ figure {
     }
   }
 }
+
+img.photo50 {
+  max-width: 100%;
+  @media screen and (min-width: $on-medium) {
+    max-width: 50%;
+  }
+}
+
