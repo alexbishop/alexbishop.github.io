@@ -14,11 +14,22 @@
   integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A" crossorigin="anonymous"></script>
 
 <style>
-.katex-display { overflow: auto hidden }
+  /* never let the maths overflow the page */
+  .katex-display {
+    overflow: auto hidden
+  }
 
-.katex-display > .katex { white-space: normal }
-/* Add space between broken lines: */
-.katex-display > .base { margin: 0.25em 0 }
-/* Compensate by reducing space around display math */
-.katex-display { margin: 0.5em 0; }
+  .katex-display>.katex {
+    white-space: normal
+  }
+
+  /* Add space between broken lines: */
+  .katex-display>.base {
+    margin: 0.25em 0
+  }
+
+  /* Compensate by reducing space around display math */
+  .katex-display {
+    margin: 0.5em 0;
+  }
 </style>
