@@ -31,8 +31,8 @@ baseurl: ""
 url: "https://alexbishop.github.io"
 
 header_pages:
-  - photo.html
   - papers.html
+  - photo.html
   - research.html
 #  - blog.html
 
