@@ -34,5 +34,5 @@ PDF versions of the two talks are available as follows:
     * Gives some basic examples
     * **Proves the Adian–Rabin theorem which states that Markov properties are non-computable**
 
-You can also find the LaTeX and PDFs for my notes [here on GitHub](https://github.com/alexbishop/unige_minicourse_2023_volume_growth).
+You can also find the LaTeX and PDFs for my notes [here on GitHub](https://github.com/alexbishop/unige_minicourse_2024_decision_problems).
 
