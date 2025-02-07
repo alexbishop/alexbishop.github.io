@@ -18,5 +18,10 @@ The focus of these talks will be on understanding these results, and their impac
 
 ## Notes
 
-You can find the LaTeX and PDFs for my notes [here on GitHub](https://github.com/alexbishop/unige_minicourse_2023_volume_growth).
+PDF versions of the two talks are available as follows:
+
+ - [Talk 1: Definitions and Background](https://github.com/alexbishop/unige_minicourse_2023_volume_growth/releases/download/v2.0.0/talk1.pdf){:target="_blank" rel="noopener noreferrer"}
+ - [Talk 2: Intermediate Growth](https://github.com/alexbishop/unige_minicourse_2023_volume_growth/releases/download/v2.0.0/talk2.pdf){:target="_blank" rel="noopener noreferrer"}
+
+You can find the LaTeX and PDFs for my notes [here on GitHub](https://github.com/alexbishop/unige_minicourse_2023_volume_growth){:target="_blank" rel="noopener noreferrer"}.
 

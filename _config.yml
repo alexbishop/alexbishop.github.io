@@ -52,6 +52,7 @@ plugins:
 
 # commit as of 10 March 2023
 remote_theme: jekyll/minima@2863624b903b17f838d6ce8d2f77900fa9d3c864
+markdown: kramdown
 
 # Exclude these files from production site
 exclude:
