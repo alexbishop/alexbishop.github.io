@@ -27,7 +27,7 @@ PDF versions of the two talks are available as follows:
     * Gives examples of cases where the word problem is easily solvable
     * **Gives a simple model of computation and studies non-computability (by the halting problem)**
     * Definition and introduction to van Kampen diagrams
-    * **Proves Greendlinger's lemma for small cancelation groups**
+    * **Proves Greendlinger's lemma for group with metric small cancelation condition C'(1/6)**
     * **Proves that there exists a finitely presentable group with non-computable word problem**
  - [Talk 2: Markov Properties](https://github.com/alexbishop/unige_minicourse_2024_decision_problems/releases/download/v1.0.0/talk2.pdf){:target="_blank" rel="noopener noreferrer"}
     * Deines Markov properties for groups
