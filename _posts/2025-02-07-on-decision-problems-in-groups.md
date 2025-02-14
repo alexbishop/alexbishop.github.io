@@ -22,7 +22,7 @@ In our second talk, we study the class of group properties known as Markov prope
 
 PDF versions of the two talks are available as follows:
 
- - [Talk 1: Definitions and Background](https://github.com/alexbishop/unige_minicourse_2024_decision_problems/releases/download/v2.0.0/talk1.pdf){:target="_blank" rel="noopener noreferrer"}
+ - [Talk 1: Definitions and Word Problems](https://github.com/alexbishop/unige_minicourse_2024_decision_problems/releases/download/v2.0.0/talk1.pdf){:target="_blank" rel="noopener noreferrer"}
     * Basic definitions
     * Gives examples of cases where the word problem is easily solvable
     * **Gives a simple model of computation and studies non-computability (by the halting problem)**
