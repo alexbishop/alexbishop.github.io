@@ -2,6 +2,7 @@
 layout: post
 title: "Minicourse: On Decision Problems in Groups"
 categories: talks
+modified_date: 2025-02-15
 author:
   - Alex Bishop
 ---
