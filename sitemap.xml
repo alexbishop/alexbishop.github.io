@@ -17,8 +17,6 @@ sitemap:
         <lastmod>{{ post.modified_date | date_to_xmlschema }}</lastmod>
       {%- elsif post.date -%}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      {%- elsif site.time -%}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       {%- endif -%}
       {% if post.sitemap.changefreq -%}
         <changefreq>{{ post.sitemap.changefreq }}</changefreq>
@@ -40,8 +38,6 @@ sitemap:
         <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
       {% elsif page.date -%}
         <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-      {% elsif site.time -%}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       {%- endif -%}
       {% if page.sitemap.changefreq -%}
         <changefreq>{{ page.sitemap.changefreq }}</changefreq>
