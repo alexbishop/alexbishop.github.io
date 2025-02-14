@@ -11,18 +11,18 @@ sitemap:
     {%- unless post.published == false %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
-      {% if post.sitemap.lastmod -%}
-        <lastmod>{{ post.sitemap.lastmod | date_to_xmlschema }}</lastmod>
-      {%- elsif post.modified_date -%}
-        <lastmod>{{ post.modified_date | date_to_xmlschema }}</lastmod>
-      {%- elsif post.date -%}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {%- if post.sitemap.lastmod %}
+      <lastmod>{{ post.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+      {%- elsif post.modified_date %}
+      <lastmod>{{ post.modified_date | date_to_xmlschema }}</lastmod>
+      {%- elsif post.date %}
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
       {%- endif -%}
-      {% if post.sitemap.changefreq -%}
-        <changefreq>{{ post.sitemap.changefreq }}</changefreq>
+      {%- if post.sitemap.changefreq %}
+      <changefreq>{{ post.sitemap.changefreq }}</changefreq>
       {%- endif -%}
-      {% if post.sitemap.priority -%}
-        <priority>{{ post.sitemap.priority }}</priority>
+      {%- if post.sitemap.priority %}
+      <priority>{{ post.sitemap.priority }}</priority>
       {%- endif %}
     </url>
     {%- endunless -%}
@@ -31,19 +31,19 @@ sitemap:
   {%- assign page_url_check1 = page.url | split: "/assets/" -%}
   {%- assign page_url_check2 = page.url | split: "/assets/" | first -%}
   {%- if page_url_check1.size <= 1 or page_url_check2.size > 0 -%}
-    {% unless page.sitemap.exclude == "yes" -%}
+    {%- unless page.sitemap.exclude == "yes" %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
-      {% if page.sitemap.lastmod -%}
-        <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
-      {%- elsif page.date -%}
-        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+      {%- if page.sitemap.lastmod %}
+      <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+      {%- elsif page.date %}
+      <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
       {%- endif -%}
-      {% if page.sitemap.changefreq -%}
-        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+      {%- if page.sitemap.changefreq %}
+      <changefreq>{{ page.sitemap.changefreq }}</changefreq>
       {%- endif -%}
-      {% if page.sitemap.priority -%}
-        <priority>{{ page.sitemap.priority }}</priority>
+      {%- if page.sitemap.priority %}
+      <priority>{{ page.sitemap.priority }}</priority>
       {%- endif %}
     </url>
     {%- endunless -%}
