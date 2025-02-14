@@ -36,7 +36,7 @@ sitemap:
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
       {% if page.sitemap.lastmod -%}
         <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
-      {% elsif page.date -%}
+      {%- elsif page.date -%}
         <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
       {%- endif -%}
       {% if page.sitemap.changefreq -%}
