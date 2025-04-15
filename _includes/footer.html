@@ -28,8 +28,8 @@
       </div>
       <div class="footer-col">
         {{% if site.author.address -%}}
-        <strong>Address:</strong>
         {% for line in site.author.address -%}
+        {{% if forloop.first %}}<strong>Address:</strong>{{% endif -%}}
           <br>{{ line | escape }}
         {%- endfor %}
         {{%- endif %}}
