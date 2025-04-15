@@ -6,16 +6,16 @@ author:
   name: Alex Bishop
   email: "alexbishop1234@gmail.com"
   twitter: AbstractProof
-  work_email: "alexander.bishop@unige.ch"
+  # work_email: "alexander.bishop@unige.ch"
   arxiv: "bishop_a_2"
   orcid: "0000-0001-6803-1143"
   github: "alexbishop"
   researchgate: "Alex_Bishop7"
-  address:
-    - Section de mathématiques
-    - Université de Genève
-    - rue du Conseil-Général 7-9
-    - 1205 Genève, Switzerland
+  # address:
+  #   - Section de mathématiques
+  #   - Université de Genève
+  #   - rue du Conseil-Général 7-9
+  #   - 1205 Genève, Switzerland
 
 email: alexbishop1234@gmail.com
 
