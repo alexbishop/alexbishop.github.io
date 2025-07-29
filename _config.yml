@@ -48,6 +48,7 @@ webmaster_verifications:
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-redirect-from
   # - jekyll-sitemap
 
 # commit as of 10 March 2023
