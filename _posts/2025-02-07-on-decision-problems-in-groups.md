@@ -7,6 +7,8 @@ author:
   - Alex Bishop
 sitemap:
     lastmod: 2025-02-15T05:03:19+11:00
+redirect_from:
+    - /blog/talks/2025/02/07/minicourse
 ---
 
 This post details a short minicourse that I wll be giving at the University of Geneva on the topic of volume growth in finitly-generated groups.
