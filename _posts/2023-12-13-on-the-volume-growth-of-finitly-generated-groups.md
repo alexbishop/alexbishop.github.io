@@ -5,7 +5,7 @@ categories: talks
 author:
   - Alex Bishop
 redirect_from:
-    - /blog/talks/2023/12/13/minicourse
+    - /blog/talks/2023/12/13/unige-minicourse
 ---
 
 This post details a short minicourse that I wll be giving at the University of Geneva on the topic of volume growth in finitly-generated groups.
