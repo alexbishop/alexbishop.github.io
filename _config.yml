@@ -46,7 +46,7 @@ plugins:
   - jekyll-redirect-from
   # - jekyll-sitemap
 
-remote_theme: jekyll/minima@c27c54ae2c9264004fb346df1dc19c0d102060a6
+remote_theme: jekyll/minima@93b192192c0777018c9ac4daadaafd5af5a4f750
 markdown: kramdown
 
 # Exclude these files from production site
