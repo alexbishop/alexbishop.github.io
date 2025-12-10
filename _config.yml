@@ -30,14 +30,9 @@ description: >-
 baseurl: ""
 url: "https://alexbishop.github.io"
 
-header_pages:
-  - papers.html
-  - photo.html
-  - research.html
-#  - blog.html
-
 minima:
   skin: auto
+  hide_site_feed_link: true
   date_format: "%A, %-d %B %Y"
  
 permalink: /blog/:categories/:year/:month/:day/:slug
@@ -51,8 +46,7 @@ plugins:
   - jekyll-redirect-from
   # - jekyll-sitemap
 
-# commit as of 10 March 2023
-remote_theme: jekyll/minima@2863624b903b17f838d6ce8d2f77900fa9d3c864
+remote_theme: jekyll/minima@c27c54ae2c9264004fb346df1dc19c0d102060a6
 markdown: kramdown
 
 # Exclude these files from production site
