@@ -6,7 +6,7 @@ author:
   name: Alex Bishop
   email: "alexbishop1234@gmail.com"
   twitter: AbstractProof
-  # work_email: "alexander.bishop@unige.ch"
+  work_email: "alexander.bishop@uts.edu.au"
   arxiv: "bishop_a_2"
   orcid: "0000-0001-6803-1143"
   github: "alexbishop"
@@ -25,7 +25,7 @@ twitter:
 
 description: >-
   The personal website for Alex Bishop.
-  A PostDoc at the University of Geneva who studies topics
+  A mathematician who studies topics
   in Geometric Group Theory and Formal Language Theory.
 baseurl: ""
 url: "https://alexbishop.github.io"
