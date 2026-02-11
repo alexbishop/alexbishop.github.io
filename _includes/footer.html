@@ -1,6 +1,5 @@
 <footer class="site-footer h-card">
   <div class="wrapper">
-
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <ul class="contact-list">
@@ -13,6 +12,9 @@
           {% if site.author.work_email -%}
             <li><a class="u-email" href="mailto:{{ site.author.work_email }}">{{ site.author.work_email }}</a></li>
           {%- endif %}
+          {% if site.author.another_work_email -%}
+            <li><a class="u-email" href="mailto:{{ site.author.another_work_email }}">{{ site.author.another_work_email }}</a></li>
+          {%- endif %}
         </ul>
         <ul class="contact-list">
           {% if site.author.orcid -%}
@@ -20,6 +22,9 @@
           {%- endif %}
           {% if site.author.arxiv -%}
           <li>arXiv: <a href="https://arxiv.org/a/{{ site.author.arxiv }}" title="Personal arXiv link" target="_blank">{{ site.author.arxiv }}</a></li>
+          {%- endif %}
+          {% if site.author.codeberg -%}
+          <li>Codeberg: <a href="https://codeberg.org/{{ site.author.codeberg }}" title="Codeberg profile" target="_blank">{{ site.author.codeberg }}</a></li>
           {%- endif %}
           {% if site.author.github -%}
           <li>GitHub: <a href="https://github.com/{{ site.author.github }}" title="Github profile" target="_blank">{{ site.author.github }}</a></li>
@@ -35,11 +40,5 @@
         {{%- endif %}}
       </div>
     </div>
-
-    <div class="social-links">
-      {%- include social.html -%}
-    </div>
-
   </div>
-
 </footer>
